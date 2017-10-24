@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Task} from '../shared/models/task.model';
 
 @Component({
@@ -7,7 +7,7 @@ import {Task} from '../shared/models/task.model';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-  public tasks: Task[] = [{title: 'Rene is typing somewhat well!'}, {title: 'Chase is a good teacher!'}];
+  @Input() tasks: Task[];
   constructor() { }
 
   ngOnInit() {
