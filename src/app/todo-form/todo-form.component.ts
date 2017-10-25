@@ -16,4 +16,8 @@ export class TodoFormComponent implements OnInit {
     this.tasks = this.service.getTasks();
   }
 
+  public onClick(newTask: string): void {
+    this.tasks.push({title: newTask});
+  }
+
 }
