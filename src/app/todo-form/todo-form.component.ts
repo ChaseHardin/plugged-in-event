@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Task} from '../shared/models/task.model';
+import {TodoFormService} from './todo-form.service';
 
 @Component({
   selector: 'app-todo-form',
@@ -7,11 +8,12 @@ import {Task} from '../shared/models/task.model';
   styleUrls: ['./todo-form.component.css']
 })
 export class TodoFormComponent implements OnInit {
-  public tasks: Task[] = [{title: 'Rene is typing somewhat well!'}, {title: 'Chase is a good teacher!'}];
+  public tasks: Task[];
 
-  constructor() { }
+  constructor(private service: TodoFormService) { }
 
   ngOnInit() {
+    this.tasks = this.service.getTasks();
   }
 
 }

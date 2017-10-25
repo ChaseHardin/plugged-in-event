@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
+import {TodoFormService} from './todo-form/todo-form.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ TodoFormService ],
   bootstrap: [TodoFormComponent]
 })
 export class AppModule { }

@@ -8,6 +8,7 @@ import {Task} from '../shared/models/task.model';
 })
 export class TodoListComponent implements OnInit {
   @Input() tasks: Task[];
+
   constructor() { }
 
   ngOnInit() {
